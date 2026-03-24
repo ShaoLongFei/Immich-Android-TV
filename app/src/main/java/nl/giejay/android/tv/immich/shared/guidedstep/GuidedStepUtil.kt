@@ -1,11 +1,12 @@
 package nl.giejay.android.tv.immich.shared.guidedstep
 
+import android.content.Context
 import androidx.leanback.widget.GuidedAction
 
 object GuidedStepUtil {
-    fun addAction(actions: MutableList<GuidedAction>, id: Long, title: String, desc: String) {
+    fun addAction(actions: MutableList<GuidedAction>, context: Context, id: Long, title: String, desc: String) {
         actions.add(
-            GuidedAction.Builder()
+            GuidedAction.Builder(context)
                 .id(id)
                 .title(title)
                 .description(desc)
@@ -15,13 +16,14 @@ object GuidedStepUtil {
 
     fun addEditableAction(
         actions: MutableList<GuidedAction>,
+        context: Context,
         id: Long,
         title: String,
         desc: String?,
         inputType: Int
     ) {
         actions.add(
-            GuidedAction.Builder()
+            GuidedAction.Builder(context)
                 .id(id)
                 .title(title)
                 .descriptionEditable(true)
@@ -32,10 +34,10 @@ object GuidedStepUtil {
     }
 
     fun addCheckedAction(
-        actions: MutableList<GuidedAction>, id: Long, title: String, desc: String,
+        actions: MutableList<GuidedAction>, context: Context, id: Long, title: String, desc: String,
         checked: Boolean, checkSetId: Int = -1
     ) {
-        val guidedAction: GuidedAction = GuidedAction.Builder()
+        val guidedAction: GuidedAction = GuidedAction.Builder(context)
             .title(title)
             .description(desc)
             .id(id)

@@ -1,0 +1,268 @@
+<!--
+  ~ Copyright 2020 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <!-- Strings for the "No Firebase" screen -->
+    <string name="no_firebase_title">Firebase 未配置</string>
+    <string name="no_firebase_body">此应用未配置 Firebase，因此与账户相关的功能不可用，观看进度将保存在本地。如需启用 Firebase 功能，请参阅 readme 文件。</string>
+    <string name="continue_text">继续</string>
+
+    <!-- Menus -->
+    <string name="menu_identity">身份</string>
+
+    <!-- Authentication and identity -->
+    <string name="email">电子邮件地址</string>
+    <string name="password">密码</string>
+    <string name="sign_in">登录</string>
+    <string name="sign_out">退出登录</string>
+    <string name="not_signed_in">未登录</string>
+    <string name="sign_in_error">登录失败：%1$s</string>
+    <string name="empty_username_or_password">用户名和密码均不能为空</string>
+    <string name="invalid_credentials">凭据无效</string>
+    <string name="onetap_error">One Tap 返回错误</string>
+    <string name="server_error">服务器错误</string>
+    <string name="unknown_error">未知错误</string>
+    <string name="sign_in_intro">默认情况下，此应用使用本地授权（MockAuthClient）。您可以使用"%1$s"作为邮箱、任意非空字符串作为密码登录。如需使用远程授权，请参阅 RemoteAuthClient 类。</string>
+
+    <!-- Channel strings -->
+    <string name="default_home_screen_channel_name">示例频道</string>
+    <string name="default_home_screen_channel_description">默认主屏幕频道示例</string>
+
+    <!-- Content types -->
+    <string name="content_type_season_episode">第 %s 季 第 %s 集</string>
+    <string name="content_type_movie">电影</string>
+    <string name="content_type_clip">片段</string>
+
+    <!-- Playback error actions -->
+    <string name="retry">重试</string>
+    <string name="go_back">返回浏览</string>
+    <string name="error_title_with_video">%s 发生了严重错误</string>
+
+    <!-- Watch Next -->
+    <string name="season">%1$s 第 %2$s 季</string>
+
+    <!-- Home Menu -->
+    <string name="seasonal">时节</string>
+    <string name="folders">文件夹</string>
+    <string name="settings">设置</string>
+    <string name="edit">编辑</string>
+    <string name="photos">照片</string>
+    <string name="random">随机</string>
+    <string name="people">人物</string>
+    <string name="recent">最近</string>
+    <string name="albums">相册</string>
+    <string name="server">服务器</string>
+    <string name="screensaver">屏保</string>
+    <string name="debug">调试</string>
+    <string name="donate">捐赠</string>
+    <string name="use_hd_thumbnails">使用高清缩略图</string>
+    <string name="use_hd_thumbnails_text">使用高清缩略图代替原始/全尺寸图片，可大幅提升加载速度。</string>
+    <string name="albums_sorting_text">设置相册的显示顺序</string>
+    <string name="order">排序</string>
+    <string name="photos_sorting_text">设置照片的显示顺序</string>
+    <string name="disable_ssl">禁用 SSL 验证</string>
+    <string name="disable_ssl_text">仅在自签名证书出现问题时使用！</string>
+    <string name="api_key_text">API 密钥</string>
+    <string name="server_url_text">服务器地址</string>
+    <string name="done">完成</string>
+
+    <!-- Auth by phone -->
+    <string name="scan_qr_below">扫描下方二维码</string>
+    <string name="or_enter_code_on_site">或在 https://immich.giejay.nl 输入验证码</string>
+
+    <!-- Metadata -->
+    <string name="metadata">元数据</string>
+
+    <!-- Screensaver dialogs and preferences -->
+    <string name="screensaver_set">将 Immich 设为屏保</string>
+    <string name="screensaver_set_select_albums_first">请先设置要显示的相册！</string>
+    <string name="screensaver_not_possible_title">无法设置屏保</string>
+    <string name="screensaver_not_possible">由于主机名或 API 密钥无效，无法启动 Immich 屏保。</string>
+    <string name="close">关闭</string>
+    <string name="interval">间隔</string>
+    <string name="screensaver_interval_desc">屏保切换间隔</string>
+    <string name="show_media_count">显示媒体数量</string>
+    <string name="show_media_count_desc_screensaver">显示总数量和当前项目编号</string>
+    <string name="show_description">显示描述</string>
+    <string name="show_description_screensaver">在屏保中显示素材描述</string>
+    <string name="show_album_name">显示相册名称</string>
+    <string name="show_album_name_desc">在屏保中显示素材所属相册名称</string>
+    <string name="show_date">显示日期</string>
+    <string name="show_date_screensaver">在屏保中显示素材日期</string>
+    <string name="show_clock">显示时钟</string>
+    <string name="show_clock_screensaver">在屏保中显示时钟</string>
+    <string name="slide_new_asset_in">滑入新素材</string>
+    <string name="slide_new_asset_in_desc">切换时以滑动方式显示新素材</string>
+    <string name="set_albums_screensaver">设置屏保相册</string>
+    <string name="set_albums_screensaver_desc">设置屏保中要显示的相册</string>
+    <string name="set_albums_screensaver_error">请先在屏保设置中配置要显示的 Immich 相册</string>
+    <string name="customize_metadata">自定义元数据</string>
+    <string name="configure_metadata_screensaver">配置屏保中显示的信息</string>
+    <string name="include_videos">包含视频</string>
+    <string name="include_videos_screensaver">在屏保中包含视频</string>
+    <string name="play_sound">播放声音</string>
+    <string name="play_sound_screensaver">屏保期间播放视频声音</string>
+    <string name="screensaver_type">屏保类型</string>
+    <string name="screensaver_type_desc">显示内容：相册、随机、最近等</string>
+
+    <!-- Slider/viewer preferences -->
+    <string name="interval_slideshow">间隔</string>
+    <string name="interval_slideshow_desc">幻灯片切换间隔</string>
+    <string name="slide_animation_speed_ms">幻灯片动画速度（毫秒）</string>
+    <string name="slide_animation_speed_desc">动画速度（毫秒）</string>
+    <string name="show_description_slideshow">显示描述</string>
+    <string name="show_description_slideshow_desc">在幻灯片中显示素材描述</string>
+    <string name="show_media_count_slideshow">显示媒体数量</string>
+    <string name="show_media_count_slideshow_desc">显示总数量和当前项目编号</string>
+    <string name="show_date_slideshow">显示日期</string>
+    <string name="show_date_slideshow_desc">在幻灯片中显示素材日期</string>
+    <string name="show_city">显示城市</string>
+    <string name="show_city_desc">在幻灯片中显示素材拍摄城市</string>
+    <string name="customize_metadata_viewer">自定义元数据</string>
+    <string name="configure_metadata_viewer">配置查看器中显示的信息</string>
+    <string name="merge_portrait_photos">合并竖向照片</string>
+    <string name="merge_portrait_photos_desc">并排显示两张竖向照片</string>
+    <string name="safe_center_crop_max_cutoff_height">安全中心裁剪最大高度裁剪 %</string>
+    <string name="safe_center_crop_max_cutoff_height_desc">使用 SafeCenterCrop 时允许裁剪的最大图片高度百分比</string>
+    <string name="safe_center_crop_max_cutoff_width">安全中心裁剪最大宽度裁剪 %</string>
+    <string name="safe_center_crop_max_cutoff_width_desc">使用 SafeCenterCrop 时允许裁剪的最大图片宽度百分比</string>
+    <string name="photo_transformation">照片变换</string>
+    <string name="photo_transformation_desc">照片变换方式</string>
+    <string name="force_original_video">强制使用原始视频</string>
+    <string name="force_original_video_desc">即使有转码版本，也播放原始视频</string>
+
+    <!-- Other preferences -->
+    <string name="photos_in_albums">相册内照片</string>
+    <string name="photos_in_albums_desc_inside">设置相册内照片的显示顺序</string>
+    <string name="content_type">内容类型</string>
+    <string name="filter_by_content_type">按内容类型筛选</string>
+    <string name="assets_outside_albums">相册外素材</string>
+    <string name="assets_outside_albums_desc">设置相册外素材的显示顺序</string>
+    <string name="enable_debug_mode">启用调试模式</string>
+    <string name="enable_debug_mode_desc">遇到问题时请启用此选项。</string>
+    <string name="load_selected_item_as_background">将选中项目作为背景</string>
+    <string name="load_selected_item_as_background_desc">将当前选中的图片或相册作为背景加载</string>
+    <string name="user_id">用户 ID</string>
+    <string name="user_id_desc">您的用户 ID，用于调试</string>
+    <string name="seasonal_photos_years_back">时节照片回溯年数</string>
+    <string name="seasonal_photos_years_back_desc">选取时节照片时回溯的年数</string>
+    <string name="seasonal_photos_period_days">时节照片时间段（天）</string>
+    <string name="recent_photos_months_back">最近照片回溯月数</string>
+    <string name="excluded_albums">排除的相册</string>
+    <string name="excluded_albums_desc">在随机/时节视图中排除特定相册的素材</string>
+
+    <!-- Language -->
+    <string name="language">语言</string>
+    <string name="language_desc">应用显示语言</string>
+    <string name="language_system">跟随系统</string>
+    <string name="language_english">English</string>
+    <string name="language_chinese_simplified">简体中文</string>
+    <string name="language_chinese_traditional">繁體中文</string>
+
+    <!-- Preference screens and categories -->
+    <string name="view_settings">查看设置</string>
+    <string name="ordering">排序方式</string>
+    <string name="slideshow">幻灯片</string>
+    <string name="other">其他</string>
+    <string name="screensaver_settings">屏保设置</string>
+    <string name="debug_settings">调试设置</string>
+    <string name="settings_for">%1$s 的设置</string>
+    <string name="filtering">筛选</string>
+
+    <!-- Auth step 1 -->
+    <string name="auth_sign_in_by_api_key">使用 API 密钥登录</string>
+    <string name="auth_sign_in_by_api_key_desc">输入 API 密钥登录您的 Immich 实例。</string>
+    <string name="auth_sign_in_by_phone">使用手机登录</string>
+    <string name="auth_sign_in_by_phone_desc">通过手机登录您的 Immich 实例。</string>
+    <string name="auth_demo_mode">演示模式</string>
+    <string name="auth_demo_mode_desc">登录 Immich 演示实例。</string>
+
+    <!-- Auth step 2 (GuidedStep) -->
+    <string name="login_immich_description">登录您的 Immich 服务器或试用演示。</string>
+    <string name="server_url_hint">服务器地址（http[s]://...）</string>
+    <string name="disable_ssl_verification">禁用 SSL 验证</string>
+    <string name="disable_ssl_verification_desc">仅在自签名证书出现问题时使用！</string>
+    <string name="debug_mode">调试模式</string>
+    <string name="debug_mode_desc">获取 Immich 数据时遇到问题请启用此选项。</string>
+    <string name="submit">提交</string>
+    <string name="enter_server_url">请输入服务器地址（https://...）</string>
+    <string name="enter_api_key">请输入 API 密钥；若已输入，请重新高亮选中后按回车/确认键，而非返回键（抱歉）。</string>
+    <string name="enter_valid_server_url">请输入有效的服务器地址（https://...）</string>
+
+    <!-- Auth by phone errors and messages -->
+    <string name="or_enter_code_on_auth_url">或在 %2$s 输入验证码 %1$s</string>
+    <string name="auth_timeout_recreating_qr">验证超时，正在重新生成二维码。</string>
+    <string name="invalid_server_url_or_api_key">服务器地址或 API 密钥无效，请重新扫描！</string>
+    <string name="could_not_fetch_qr">无法获取二维码：%1$s</string>
+    <string name="could_not_fetch_qr_short">无法获取二维码</string>
+    <string name="could_not_load_assets">无法从 Immich 加载素材</string>
+
+    <!-- Albums ordering -->
+    <string name="albums_order_asset_count">素材数量</string>
+
+    <!-- Donate -->
+    <string name="donation_title">捐赠</string>
+    <string name="donation_subtitle">开发此应用需要付出大量精力，如果您想表达感谢，可以通过以下方式捐赠。</string>
+    <string name="donation_exhausted">您已用尽所有捐赠方式，非常感谢！</string>
+    <string name="donation_init_failed">无法初始化捐赠服务，抱歉！</string>
+
+    <!-- Ordering -->
+    <string name="order_alphabetically_az">按字母排序（A–Z）</string>
+    <string name="order_alphabetically_za">按字母排序（Z–A）</string>
+    <string name="order_newest_oldest">最新 – 最旧</string>
+    <string name="order_oldest_newest">最旧 – 最新</string>
+    <string name="order_last_updated">最近更新</string>
+    <string name="order_least_updated">最久未更新</string>
+
+    <!-- Interval titles -->
+    <string name="interval_1_second">1 秒</string>
+    <string name="interval_3_seconds">3 秒</string>
+    <string name="interval_5_seconds">5 秒</string>
+    <string name="interval_10_seconds">10 秒</string>
+    <string name="interval_20_seconds">20 秒</string>
+    <string name="interval_30_seconds">30 秒</string>
+    <string name="interval_1_minute">1 分钟</string>
+    <string name="interval_3_minutes">3 分钟</string>
+    <string name="interval_5_minutes">5 分钟</string>
+    <string name="interval_10_minutes">10 分钟</string>
+
+    <!-- Content type filter -->
+    <string name="content_type_all">全部</string>
+    <string name="content_type_image">图片</string>
+    <string name="content_type_video">视频</string>
+
+    <!-- Metadata alignment -->
+    <string name="left">左</string>
+    <string name="right">右</string>
+
+    <string name="already_added_metadata">所有可用元数据项均已添加</string>
+    <string name="no_items_to_play">没有可播放的项目</string>
+    <string name="no_assets_for_screensaver">没有可显示的屏保素材，请在设置中配置其他屏保类型。</string>
+    <string name="edit_metadata_title">编辑元数据</string>
+    <string name="meta_data_type_dialog_title">类型</string>
+    <string name="meta_data_type_desc">元数据类型</string>
+    <string name="meta_data_type_title">元数据类型</string>
+    <string name="meta_data_order_dialog_title">顺序</string>
+    <string name="meta_data_order_desc">元数据顺序</string>
+    <string name="meta_data_order_title">元数据顺序</string>
+    <string name="meta_data_font_size_title">字体大小</string>
+    <string name="meta_data_font_size_dialog_title">字体大小</string>
+    <string name="meta_data_padding_title">内边距</string>
+    <string name="meta_data_padding_dialog_title">项目上下内边距</string>
+    <string name="meta_data_delete_desc">删除项目</string>
+    <string name="meta_data_save_desc">保存项目</string>
+</resources>

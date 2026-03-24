@@ -1,5 +1,6 @@
 package nl.giejay.android.tv.immich
 
+import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.view.KeyEvent
@@ -8,8 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
+import nl.giejay.android.tv.immich.shared.prefs.LANGUAGE
 import nl.giejay.android.tv.immich.shared.prefs.MetaDataScreen
 import nl.giejay.android.tv.immich.shared.prefs.PreferenceManager
+import nl.giejay.android.tv.immich.shared.util.LocaleHelper
 import nl.giejay.android.tv.immich.shared.viewmodel.KeyEventsViewModel
 import nl.giejay.mediaslider.adapter.AlignOption
 import timber.log.Timber
@@ -23,10 +26,22 @@ class MainActivity : FragmentActivity() {
     private lateinit var navGraph: NavGraph
     private lateinit var navController: NavController
 
+    override fun attachBaseContext(newBase: Context) {
+        val language = PreferenceManager.get(LANGUAGE)
+        super.attachBaseContext(LocaleHelper.applyLocale(newBase, language))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         Timber.i("Booting main activity")
+
+        PreferenceManager.sharedPreference.registerOnSharedPreferenceChangeListener { _, key ->
+            if (key == LANGUAGE.key()) {
+                Timber.i("Language changed, recreating activity")
+                window.decorView.post { recreate() }
+            }
+        }
 
         setContentView(R.layout.activity_main)
 

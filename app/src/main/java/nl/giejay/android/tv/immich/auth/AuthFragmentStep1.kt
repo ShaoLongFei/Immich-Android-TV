@@ -40,6 +40,7 @@ class AuthFragmentStep1 : GuidedStepSupportFragment() {
     override fun onCreateActions(actions: MutableList<GuidedAction>, savedInstanceState: Bundle?) {
         addCheckedAction(
             actions,
+            requireContext(),
             ACTION_SIGN_IN,
             getString(R.string.auth_sign_in_by_api_key),
             getString(R.string.auth_sign_in_by_api_key_desc),
@@ -48,6 +49,7 @@ class AuthFragmentStep1 : GuidedStepSupportFragment() {
         )
         addCheckedAction(
             actions,
+            requireContext(),
             ACTION_PHONE_SIGN_IN,
             getString(R.string.auth_sign_in_by_phone),
             getString(R.string.auth_sign_in_by_phone_desc),
@@ -56,6 +58,7 @@ class AuthFragmentStep1 : GuidedStepSupportFragment() {
         )
         addCheckedAction(
             actions,
+            requireContext(),
             ACTION_DEMO,
             getString(R.string.auth_demo_mode),
             getString(R.string.auth_demo_mode_desc),
@@ -69,7 +72,7 @@ class AuthFragmentStep1 : GuidedStepSupportFragment() {
         savedInstanceState: Bundle?
     ) {
         super.onCreateButtonActions(actions, savedInstanceState)
-        addAction(actions, ACTION_CONTINUE, getString(R.string.continue_text), "")
+        addAction(actions, requireContext(), ACTION_CONTINUE, getString(R.string.continue_text), "")
     }
 
     override fun onGuidedActionClicked(action: GuidedAction) {

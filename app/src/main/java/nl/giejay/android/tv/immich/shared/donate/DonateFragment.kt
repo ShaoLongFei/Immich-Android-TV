@@ -56,6 +56,7 @@ class DonateFragment : GuidedStepSupportFragment() {
                         .forEachIndexed { index, product ->
                             addCheckedAction(
                                 actions,
+                                requireContext(),
                                 index.toLong(),
                                 product.name + " - " + product.oneTimePurchaseOfferDetails!!.formattedPrice,
                                 product.description,

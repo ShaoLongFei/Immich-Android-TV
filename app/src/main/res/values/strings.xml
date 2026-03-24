@@ -167,6 +167,14 @@
     <string name="excluded_albums">Excluded albums</string>
     <string name="excluded_albums_desc">Exclude assets in specific albums for random/seasonal view</string>
 
+    <!-- Language -->
+    <string name="language">Language</string>
+    <string name="language_desc">App display language</string>
+    <string name="language_system">System default</string>
+    <string name="language_english">English</string>
+    <string name="language_chinese_simplified">简体中文</string>
+    <string name="language_chinese_traditional">繁體中文</string>
+
     <!-- Preference screens and categories -->
     <string name="view_settings">View Settings</string>
     <string name="ordering">Ordering</string>

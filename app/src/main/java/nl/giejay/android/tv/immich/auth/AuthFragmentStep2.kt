@@ -49,6 +49,7 @@ class AuthFragmentStep2 : GuidedStepSupportFragment() {
     override fun onCreateActions(actions: MutableList<GuidedAction>, savedInstanceState: Bundle?) {
         addEditableAction(
             actions,
+            requireContext(),
             ACTION_NAME,
             getString(R.string.server_url_hint),
             PreferenceManager.get(HOST_NAME),
@@ -56,6 +57,7 @@ class AuthFragmentStep2 : GuidedStepSupportFragment() {
         )
         addEditableAction(
             actions,
+            requireContext(),
             ACTION_API_KEY,
             getString(R.string.api_key_text),
             PreferenceManager.get(API_KEY),
@@ -63,6 +65,7 @@ class AuthFragmentStep2 : GuidedStepSupportFragment() {
         )
         addCheckedAction(
             actions,
+            requireContext(),
             ACTION_CHECK_CERTS,
             getString(R.string.disable_ssl_verification),
             getString(R.string.disable_ssl_verification_desc),
@@ -70,6 +73,7 @@ class AuthFragmentStep2 : GuidedStepSupportFragment() {
         )
         addCheckedAction(
             actions,
+            requireContext(),
             ACTION_DEBUG_MODE,
             getString(R.string.debug_mode),
             getString(R.string.debug_mode_desc),
@@ -82,7 +86,7 @@ class AuthFragmentStep2 : GuidedStepSupportFragment() {
         savedInstanceState: Bundle?
     ) {
         super.onCreateButtonActions(actions, savedInstanceState)
-        addAction(actions, ACTION_CONTINUE, getString(R.string.submit), "")
+        addAction(actions, requireContext(), ACTION_CONTINUE, getString(R.string.submit), "")
     }
 
     override fun onGuidedActionClicked(action: GuidedAction) {
